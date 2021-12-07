@@ -1,0 +1,17 @@
+{  
+    "manifest_version": 3,
+    "name": "Auto BALM vote",  
+    "description": "Automatic vote for BALM when you load the page. Much wow.",  
+    "version": "1.0",    
+    "permissions": ["tabs"],
+    "host_permissions": [
+        "https://letremplin.rocknfolk.com/les-groupes-du-tremplin-rockfolk-radio/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "https://letremplin.rocknfolk.com/*" ],
+            "all_frames": true,
+            "js": ["content_script.js"]
+        }
+    ]
+}
